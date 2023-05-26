@@ -1,0 +1,58 @@
+.task1 {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .task1_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rectangle {
+    padding: 40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px;
+  }
+  .circle {
+      width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 176, 27);
+    border-radius: 50%;
+  }
+  .circle h2 {
+    font-size: 50px;
+   
+    
+  }
+  .circle p {
+    font-size: 14px;
+    text-decoration: underline;
+    
+  }
+  .button_1 {
+    background-color: rgb(4, 228, 153);;
+    border: none;
+    padding: 7px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+  }
+  .button_1:hover {
+      background-color: rgb(0, 172, 114);
+      }
+  .button_1:active {
+  box-shadow: none;
+  }
+  

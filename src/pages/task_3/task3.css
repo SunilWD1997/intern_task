@@ -1,0 +1,26 @@
+.task3{
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button_3{
+    width: 200px;
+    padding: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 35px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+    border: none;
+}
+.button_3:hover{
+    color: white;
+}
+.button_3:active{
+    
+    box-shadow: none;
+    
+}
