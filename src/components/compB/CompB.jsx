@@ -13,17 +13,24 @@ const AllOutput = ({cendol}) => {
     const[bgColor, setBgColor]=useState(false);
     const[yellBg, setYellBg]=useState(false);
 
-    const handelCount = () =>{
+    const handelBg = () =>{
    
       const randomColors = '#' + Math.random().toString(16).slice(2, 8)
       setChangeColor(randomColors);
-      if(count < 12){
-         setCount(count + 10);
-      }
+    
        
         setYellBg(true)
         setBgColor(!bgColor);
     }
+
+
+    const handelCount = () =>{
+      
+        setCount(count + 10);
+     
+    }
+
+
 
   return (
     <div className="task1">
@@ -32,7 +39,7 @@ const AllOutput = ({cendol}) => {
         {/* square div starts here */}
         <div className="rectangle">
           {/* circle div starts here */}
-          <div className="circle" style={{backgroundColor: yellBg? bgColor?`${changeColor}`: 'rgb(0, 172, 114)': 'rgb(235, 176, 27)' }}>
+          <div className="circle" style={{backgroundColor: yellBg? bgColor?`${changeColor}`: 'rgb(0, 172, 114)': 'rgb(235, 176, 27)' }} onClick={handelCount}>
             <h2>{count}</h2>
             <p>Click to increase counter</p>
           </div>
@@ -40,7 +47,7 @@ const AllOutput = ({cendol}) => {
         </div>
         {/* square div ends here */}
 
-        <button className="button_1" onClick={()=>handelCount()} style={{backgroundColor: bgColor?`${changeColor}`: 'rgb(0, 172, 114)' }}>Change Color</button>
+        <button className="button_1" onClick={()=>handelBg()} style={{backgroundColor: bgColor?`${changeColor}`: 'rgb(0, 172, 114)' }}>Change Color</button>
       </div>
       {/* child div of task1 ends here */}
     </div>

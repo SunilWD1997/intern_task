@@ -28,6 +28,7 @@
     align-items: center;
     background-color: rgb(235, 176, 27);
     border-radius: 50%;
+    cursor: pointer;
   }
   .circle h2 {
     font-size: 50px;

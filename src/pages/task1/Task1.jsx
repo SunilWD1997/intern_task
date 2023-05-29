@@ -10,11 +10,15 @@ const Task1 = () => {
     const[bgColor, setBgColor]=useState(true);
     const[randBgColor, setRandBgcolor]=useState(`rgb(0, 172, 114)`);
 
-    const handelCount = () =>{
+    const handelBg = () =>{
       const randomBgColors = '#' + Math.random().toString(16).slice(2, 8);
       setRandBgcolor(randomBgColors);
-        setCount(count + 1);
+       
         setBgColor(false);
+    }
+
+    const handelCount = () =>{
+      setCount(count + 1);
     }
 
   return (
@@ -24,7 +28,7 @@ const Task1 = () => {
         {/* square div starts here */}
         <div className="rectangle">
           {/* circle div starts here */}
-          <div className="circle" style={{backgroundColor: bgColor?'': `${randBgColor}` }}>
+          <div className="circle" style={{backgroundColor: bgColor?'': `${randBgColor}` }} onClick={handelCount}>
             <h2>{count}</h2>
             <p>Click to increase counter</p>
           </div>
@@ -32,7 +36,7 @@ const Task1 = () => {
         </div>
         {/* square div ends here */}
 
-        <button className="button_1" onClick={()=>handelCount()} style={{backgroundColor: bgColor?' rgb(4, 228, 153)': `${randBgColor}` }}>Change Color</button>
+        <button className="button_1" onClick={()=>handelBg()} style={{backgroundColor: bgColor?' rgb(4, 228, 153)': `${randBgColor}` }}>Change Color</button>
       </div>
       {/* child div of task1 ends here */}
     </div>
